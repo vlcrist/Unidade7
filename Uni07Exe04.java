@@ -26,14 +26,31 @@ public class Uni07Exe04 {
         String frase = sc.nextLine().toUpperCase();
         return frase;
     }
+
+    private int contarVogais(String frase) {
+        int contadorVogais = 0;
+        for (int i = 0; i < frase.length(); i++) {
+            if (frase.charAt(i) == 'A' || frase.charAt(i) == 'E' || 
+                frase.charAt(i) == 'I' || frase.charAt(i) == 'O' || frase.charAt(i) == 'U') {
+                    contadorVogais++;
+            } 
+        }
+        return contadorVogais;
+    }
     
     
 
     public Uni07Exe04 () {
         Scanner sc = new Scanner(System.in);
         String frase = lerFrase(sc);
+        int quantidade = contarVogais(frase);
+        System.out.println("Quantidade de vogais = " + quantidade);
 
 
         sc.close();
+    }
+
+    public static void main(String[] args) {
+        new Uni07Exe04();
     }
 }
