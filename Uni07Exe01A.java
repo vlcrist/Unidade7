@@ -45,6 +45,8 @@ public class Uni07Exe01A {
         int quantidade = contarLetras(letra, frase);
 
         exibirResultado(letra, frase, quantidade);
+
+        sc.close();
     }
 
     public static void main(String[] args) {
